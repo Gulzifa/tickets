@@ -1,0 +1,196 @@
+.App {
+  width:  max-content;
+  margin: 84px 276px 60px 276px;
+}
+
+.header {
+  color: #4E148C;
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  gap: 34px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: max-content;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.sidebar_burger,
+.sidebar_burgerMenu {
+  display: none;
+}
+
+.tickets {
+  width: 100%;
+}
+
+@media screen and (max-width: 1700px) {
+  .App {
+    margin: 84px 100px 60px 100px;
+  }
+
+}
+
+@media screen and (max-width: 1400px) {
+  .App {
+    margin: 60px;
+    width:  max-content;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .App {
+    width: auto;
+  }
+  .main {
+    grid-template-columns: 30% 70%;
+    gap: 20px;
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .App {
+    margin: 50px 36px 50px 36px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .App {
+    margin: 19px 36px 50px 36px;
+  }
+
+  .header {
+    display: block;
+    text-align: center;
+  }
+
+  .header>p {
+    display: none;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar_burger {
+    display: flex;
+    width: 100%;
+    height: 44px;
+    background-color: #4E148C;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 12px 18px;
+    margin-bottom: 34px;
+  }
+
+  .sidebar_burger>h1 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .sidebar_burger>h1::after {
+    content: ' любое кол-во пересадок';
+  }
+  .sidebar_burgerSettings {
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 4px;
+  }
+
+  .sidebar_burgerSettings:hover {
+    transform: scale(1.05);
+  }
+
+  .sidebar_burgerSettings>button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin-left: 30px;
+    cursor: pointer;
+  }
+
+  .sidebar_burgerMenu{
+    display: flex;
+    align-items: flex-start;
+    background-color: #4E148C;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 245px;
+    left: 36px;
+    right: 36px;
+    z-index: 10;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .sidebar_burger>h1::after {
+    content: ' пересадок: 0, 1, 2, 3';
+  }
+  .sidebar_burgerSettings > p {
+    display: none;
+  }
+  .sidebar_burger>h1 {
+    font-size: 12px;
+  }
+  .sidebar_burgerSettings {
+    margin-top: 0;
+  }
+  .App {
+    margin: 31px 16px 147px 16px;
+  }
+  .sidebar_burgerMenu{
+    top: 255px;
+    left: 16px;
+    right: 16px;
+
+  }
+}
+@media screen and (max-width: 430px) {
+  .sidebar_burgerMenu{
+    top: 265px;
+    left: 16px;
+    right: 16px;
+  }
+  .sidebar_burger {
+    height: 50px;
+  }
+}
+

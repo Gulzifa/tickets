@@ -1,0 +1,102 @@
+.ticketsItem_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 47px;
+    width: 100%;
+
+}
+
+.ticketItem {
+    width: 100%;
+    height: 174px;
+    padding: 38px 43px 25px 39px;
+    color: #4E148C;
+    background-color: #E8EBF2;
+    border: none;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.ticketPriceLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.ticketInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.ticketLogo {
+    margin-top: -5px;
+    width: 160px;
+    height: 40px;
+}
+
+.ticketDuration {
+    display: flex;
+    flex-direction: row;
+}
+
+.info_header {
+    color: #858AE3;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.info_wrap {
+    text-align: start;
+}
+
+@media screen and (max-width: 1200px) {
+    .ticketItem {
+      font-size: 16px;
+      width: 100%;
+    }
+    h3 {
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .ticketsItem_wrap {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .ticketItem{
+        width: 100%;
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    .ticketItem{
+        width: 100%;
+    }
+  }
+
+@media screen and (max-width: 400px) {
+    .ticketItem{
+        padding: 20px;
+    }
+    .ticketInfo {
+        font-size: 14px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    .ticketLogo {
+        margin-top: 0px;
+        width: 140px;
+    }
+  }
+
+  

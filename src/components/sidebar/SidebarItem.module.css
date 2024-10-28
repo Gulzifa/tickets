@@ -1,0 +1,200 @@
+.sidebar_item {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 272px;
+}
+
+h1 {
+    color: #4E148C;
+    font-size: 20px;
+}
+
+.sidebar_list {
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    margin-bottom: 47px;
+    gap: 20px;
+    background-color: #E8EBF2;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+label {
+   color: #858AE3;
+   margin-left: 45px;
+}
+
+
+input {
+    display: none;
+}
+
+.checkbox_span {
+    line-height: 20px;
+}
+
+.checkbox_span::before {
+    content: "\00A0";
+    display: inline-block;
+    box-sizing: border-box;
+    width: 21px;
+    height: 21px;
+    border: 1px solid #4E148C;
+    border-radius: 4px;
+    margin-right: 22px;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + .checkbox_span::before { 
+    color: #4E148C; 
+    content: "\2713"; 
+    font-weight: bold
+}
+
+.checkbox_label:last-child {
+    margin-bottom: 20px;
+}
+.radio_label:last-child{
+    margin-bottom: 0px;
+}
+
+.radio_span::before {
+    content: "\00A0";
+    display: inline-block;
+    box-sizing: border-box;
+    width: 21px;
+    height: 21px;
+    border: 1px solid #4E148C;
+    border-radius: 50%;
+    margin-right: 22px;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+input[type=radio]:checked + .radio_span::before {
+    content: "\25CF";
+    color: #4E148C;
+    font-size: 29px;
+    line-height: 15px;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .sidebar_item {
+        width: 230px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+    label {
+        margin-left: 0px;
+        font-size: 14px;
+     }
+     .checkbox_span::before {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        line-height: 16px;
+     }
+     input[type=checkbox]:checked + .checkbox_span::before { 
+        line-height: 16px;
+        padding-left: 2px;
+    }
+    .radio_span::before {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        line-height: 16px;
+    }
+    
+    input[type=radio]:checked + .radio_span::before {
+        font-size: 24px;
+        line-height: 12px;
+    
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    .sidebar_list {
+        background-color: #4E148C;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .sidebar_list > h1 {
+        color: #fff;
+    }
+
+    .sidebar_item {
+        width: inherit;
+    }
+    
+    span {
+        font-size: 16px;
+        color: #fff;
+    }
+    .checkbox_span::before {
+        width: 21px;
+        height: 21px;
+        border: 1px solid #fff;
+    }
+    
+    input[type=checkbox]:checked + .checkbox_span::before { 
+        color: #fff; 
+        padding-left: 3px;
+    }
+    
+    .checkbox_label:last-child {
+        margin-bottom: 0px;
+    }
+    
+    .radio_span::before {
+        width: 21px;
+        height: 21px;
+        border: 1px solid #fff;
+        line-height: 25px;
+
+    }
+    
+    input[type=radio]:checked + .radio_span::before {
+        content: "\25CF";
+        color: #fff;
+        font-size: 29px;
+        line-height: 15px;
+        text-align: center;
+    
+    }
+}
+
+@media screen and (max-width: 430px) {
+    label {
+        font-size: 12px;
+     }
+     .checkbox_span::before {
+        width: 14px;
+        height: 14px;
+        margin-right: 8px;
+        line-height: 14px;
+     }
+     input[type=checkbox]:checked + .checkbox_span::before { 
+        line-height: 14px;
+        padding-left: 2px;
+    }
+    .radio_span::before {
+        width: 14px;
+        height: 14px;
+        margin-right: 8px;
+        line-height: 14px;
+    }
+    
+    input[type=radio]:checked + .radio_span::before {
+        font-size: 24px;
+        line-height: 12px;
+    
+    }
+}
